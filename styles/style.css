@@ -1,5 +1,436 @@
-/* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
+/* Основные стили проекта.*/
 
 .page {
-  /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
+  background-color: var(--bg-color);
+  background: var(--bg-cover) no-repeat center / cover;
+  background-attachment: fixed;
 }
+
+/*Переиспользуемые селекторы*/
+
+.subtitle {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--accent-color);
+  line-height: 130%;
+  margin-block-end: 20px;
+  width: 100%;
+}
+
+.title-decor {
+  font-size: 18px;
+  background-color: var(--accent-color);
+  font-weight: 700;
+  line-height: 130%;
+  color: var(--subtitle-color);
+  width: 100%;
+  margin-block-end: 10px;
+}
+
+.header-text-shadow {
+  text-shadow: 4px 4px 0 var(--accent-color)
+}
+
+.text-shadow {
+  text-shadow: 2px 2px 0 var(--accent-color)
+}
+
+.content__text {
+  margin-block-end: 20px;
+  color: var(--text-color);
+  font-size: 18px;
+  width: 100%;
+  line-height: 130%;
+}
+
+
+/*Стили для блока Header*/
+
+.header {
+  display: grid;
+  padding-inline: 10px;
+  position: relative;
+  width: clamp(23.4375rem, 0rem + 100vw, 64rem);
+}
+
+.decorated-zone::before {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 25px;
+  height: 25px;
+  border-inline-end: 1px solid var(--accent-color);
+  border-block-start: 1px solid var(--accent-color);
+  right: 10px;
+  top: 10px;
+}
+
+.decorated-zone::after {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 25px;
+  height: 25px;
+  border-block-end: 1px solid var(--accent-color);
+  border-inline-start: 1px solid var(--accent-color);
+  left: 10px;
+  bottom: 10px;
+}
+
+
+.header__theme-menu {
+  margin-block-start: 74px;
+  width: 100%;
+  padding-inline-end: 10px;
+}
+
+.header__theme-menu-list {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  gap: 10px;
+}
+
+.header__theme-menu-button {
+  font-family: var(--font-family);
+  background-color: transparent;
+  border: none;
+  text-transform: lowercase;
+  color: var(--accent-color);
+  font-size: 18px;
+  min-width: 70px;
+  min-height: 26px;
+}
+
+.header__theme-menu-button:disabled {
+  border: 1px solid var(--accent-color);
+}
+
+.header__decoration-icon {
+  position: absolute;
+  top: 10px;
+  right: 37px;
+  color: var(--accent-color);
+  line-height: 139%;
+  text-align: center;
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: 18px;
+}
+
+.header__decoration-icon::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 8px;
+  right: -15px;
+  width: 9px;
+  height: 9px;
+  background-color: var(--accent-color);
+  box-shadow: 0 0 4px 2px var(--accent-color);
+  border-radius: 5px;
+  border-right: 1px solid var(--accent-color);
+  border-top: 1px solid var(--accent-color);
+}
+
+.header__title {
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  color: var(--color-header-title);
+  text-align: start;
+  width: 100%;
+  margin-block-start: 65px;
+  line-height: 84%;
+}
+
+.header__description {
+  padding-inline-end: 36px;
+  max-width: 355px;
+  margin-block-end: 66px;
+  margin-block-start: 52px;
+}
+
+/*Стили для основного контента*/
+
+.main {
+  margin-block-start: 39px;
+  width: clamp(23.4375rem, 0rem + 100vw, 64rem);
+  padding-inline: 10px;
+}
+
+.content {
+  margin-block-end: 51px;
+  width: 100%;
+}
+
+.content:nth-child(3) .title-decor:nth-child(2) {
+  margin-block-end: 18px;
+}
+
+.content__images {
+  display: grid;
+  gap: 10px;
+  justify-content: center;
+  width: 100%;
+}
+
+.content__image {
+  width: 100%;
+  height: auto;
+}
+
+/*Стили для Footer*/
+
+.footer {
+  width: clamp(23.4375rem, 0rem + 100vw, 64rem);
+  padding-inline: 10px;
+  margin-block-start: 40px;
+  padding-block: 210px;
+  position: relative;
+}
+
+.footer .header__title {
+  text-align: center;
+}
+
+/*Медиа для ширины больше 768px*/
+
+@media (width >= 768px) {
+
+  .main,
+  .footer {
+    padding-inline: 20px;
+  }
+
+  .main {
+    margin-block-start: 59px;
+  }
+
+  .header__theme-menu {
+    margin-block-start: 190px;
+  }
+
+  .header__title {
+   font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+   margin-block-start: 173px;
+  }
+
+  .header__description {
+    justify-self: end;
+    margin-block-end: 183px;
+    margin-block-start: 162px;
+    margin-right: 10px;
+  }
+
+  .header__decoration-icon {
+    top: 20px;
+    right: 47px;
+  }
+
+  .decorated-zone::before {
+    top: 20px;
+    right: 20px;
+  }
+
+  .decorated-zone::after {
+    left: 20px;
+    bottom: 20px;
+  }
+
+  .content:nth-child(1),
+  .content:nth-child(3) {
+    display: grid;
+    grid-template-columns: 1fr clamp(29.5rem, -3.5rem + 68.75vw, 40.5rem);
+  }
+
+  .content:nth-child(2) {
+    margin-block-start: 59px;
+  }
+
+  .content:nth-child(2) .content__title {
+    max-width: 236px;
+  }
+
+  .content:nth-child(3) {
+    margin-block-start: 80px;
+  }
+
+  .content:nth-child(4) {
+    margin-block-start: 65px;
+  }
+
+  .content:nth-child(1) .content__title,
+  .content:nth-child(3) .content__title {
+    grid-column: 1;
+    grid-row-start: 1;
+    grid-row-end: 12;
+    max-width: 236px;
+  }
+
+  .content__images {
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: repeat(3, auto);
+    gap: 20px;
+    grid-auto-flow: dense;
+  }
+
+  .content__image:nth-child(1) {
+    grid-column: 1 / 3;  
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .content__image:nth-child(2) {
+    height: 100%;
+    object-fit: cover;
+    grid-column: 3 / 4;
+    grid-row: 1 / 3;  
+  }
+
+  .content__image:nth-child(3) {
+    grid-column: 1 / 2;
+    grid-row: 2 / 4;
+    height: 100%;
+    object-fit: cover;  
+  }
+
+  .content__image:nth-child(5) {
+    grid-column: 2 / 4;
+    grid-row: 3 / 4;
+    height: 100%;
+    object-fit: cover;  
+  }
+
+  .footer {
+    padding-block: 300px;
+  }
+}
+
+/*Медиа для ширины больше 1024px*/
+
+@media (width >= 1024px) {
+
+  .header,
+  .main,
+  .footer {
+    margin-inline: auto;
+  }
+
+  .header__theme-menu {
+    margin-block-start: 20px;
+    justify-items: center;
+  }
+
+  .header__theme-menu-list {
+    flex-direction: row;
+    gap: 10px;
+  }
+
+  .header__title {
+    margin-block-start: 272px;
+  }
+
+  .header__description {
+    margin-block-start: 111px;
+    max-width: 493px;
+    margin-block-end: 172px;
+  }
+
+  .main {
+    margin-block-start: 0;
+  }
+
+  .content {
+    margin-block-end: 41px;
+  }
+  
+  .content:nth-child(2) {
+    display: grid;
+    column-gap: 20px;
+    row-gap: 10px;
+    grid-template-columns: repeat(3, 1fr);;
+    grid-template-rows: repeat(3, min-content);
+    margin-block-end: 56px;
+    margin-block-start: 10px;
+  }
+  .content:nth-child(2) .title-decor {
+    margin-block-end: 0;
+  }
+
+  .content:nth-child(2) .content__title {
+    grid-column: 1 / 4;
+    margin-block-end: 7px;
+  }
+
+  .content:nth-child(2) h3 {
+    grid-row: 2 / 3;
+  }
+
+  .content:nth-child(3) {
+    margin-block-start: 56px;
+  }
+
+  .content:nth-child(3) .title-decor:nth-child(2) {
+    margin-block-end: 22px;
+  }
+
+  .content:nth-child(1),
+  .content:nth-child(3) {
+    display: grid;
+  }
+
+  .content:nth-child(3) .title-decor {
+    margin-block-start: 0;
+  }
+
+  .content:nth-child(1) .content__title,
+  .content:nth-child(3) .content__title {
+    grid-column: 1;
+    grid-row-start: 1;
+    grid-row-end: 12;
+    max-width: 314px;
+  }
+
+  .content__images {
+    margin-block-start: 20px;
+  }
+
+  .footer {
+    padding-block-start: 64px;
+    padding-block-end: 316px;
+  }
+}
+
+/*Состояния кликабельных элементов*/
+
+.content__link:hover {
+  border-block-end: 1px solid var(--text-color) ;
+}
+
+.content__link:focus {
+  outline: 1px solid var(--text-color);
+}
+
+.theme-light
+.header__theme-menu-button:hover {
+  border-color: rgb(53, 52, 48, 0.4);
+}
+
+.theme-dark
+.header__theme-menu-button:hover {
+  border-color: rgb(255, 0, 112, 0.4);
+}
+
+.header__theme-menu-button:focus {
+  outline: none;
+}
+
+.theme-light
+.header__theme-menu-button:focus {
+  border-block-end: 1px solid var(--text-color);
+}
+
+.header__theme-menu-button:focus {
+  border-block-end: 1px solid var(--accent-color);
+}
+
+
