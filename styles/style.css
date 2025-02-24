@@ -429,6 +429,7 @@
   border-block-end: 1px solid var(--text-color);
 }
 
+.theme-dark
 .header__theme-menu-button:focus {
   border-block-end: 1px solid var(--accent-color);
 }
