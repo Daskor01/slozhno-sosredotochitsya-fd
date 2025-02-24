@@ -400,7 +400,7 @@
   }
 }
 
-/*Состояния кликабельных элементов*/
+/*Стили состояния кликабельных элементов*/
 
 .content__link:hover {
   border-block-end: 1px solid var(--text-color) ;
