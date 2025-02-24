@@ -51,6 +51,8 @@
   padding-inline: 10px;
   position: relative;
   width: clamp(23.4375rem, 0rem + 100vw, 64rem);
+  height: 100vh;
+  min-height: 668px;
 }
 
 .decorated-zone::before {
@@ -186,6 +188,8 @@
   margin-block-start: 40px;
   padding-block: 210px;
   position: relative;
+  height: 100vh;
+  min-height: 375px;
 }
 
 .footer .header__title {
