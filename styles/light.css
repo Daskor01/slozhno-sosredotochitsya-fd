@@ -6,6 +6,7 @@
   --color-header-title: #FFC2E6;
   --bg-cover: url(../images/cover-image-light.png);
   --subtitle-color: #353430;
+  --decor-color: var(--text-color);
   
   --underline-color: var(--text-color);
   --border-color: var(--text-color);
@@ -22,6 +23,7 @@
   --bg-cover: url(../images/cover-image-light.png);
   --subtitle-color: #353430;
   --button-color: var(--text-color);
+  --decor-color: #353430;
 }
 
   .theme-dark 
@@ -34,3 +36,8 @@
     display: none;
   }
 }
+
+.theme-light
+.header__decoration-icon {
+    display: none;
+  }

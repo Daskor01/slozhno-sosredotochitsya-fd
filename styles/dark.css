@@ -6,6 +6,7 @@
   --color-header-title: #DB00FF;
   --subtitle-color: #000028;
   --bg-cover: url(../images/cover-image-dark.png);
+  --decor-color: var(--accent-color);
 
   --underline-color: var(--accent-color);
   --border-color: var(--text-color);
@@ -22,5 +23,6 @@
   --subtitle-color: #000028;
   --bg-cover: url(../images/cover-image-dark.png);
   --button-color: var(--accent-color);
+  --decor-color: var(--accent-color);
 }
 }
