@@ -8,5 +8,9 @@
   --font-family: 'IBM Plex mono', monospace;
   --color-header-title: #DB00FF;
   --bg-cover: url(../images/cover-image-dark.png);
-  --border-button-color: var(--accent-color);
+  
+  --underline-color: var(--accent-color);
+  --border-color: var(--text-color);
+  --border-color-button-hover:rgb(255, 0, 112, 40%);
+  --button-color: var(--accent-color);
 }
