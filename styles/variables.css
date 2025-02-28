@@ -9,6 +9,7 @@
   --color-header-title: #DB00FF;
   --bg-cover: url(../images/cover-image-dark.png);
   --decor-color: var(--accent-color);
+  --content-title-color:var(--accent-color);
   
   --underline-color: var(--accent-color);
   --border-color: var(--text-color);

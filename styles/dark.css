@@ -7,6 +7,7 @@
   --subtitle-color: #000028;
   --bg-cover: url(../images/cover-image-dark.png);
   --decor-color: var(--accent-color);
+  --content-title-color:var(--accent-color);
 
   --underline-color: var(--accent-color);
   --border-color: var(--text-color);
@@ -24,5 +25,11 @@
   --bg-cover: url(../images/cover-image-dark.png);
   --button-color: var(--accent-color);
   --decor-color: var(--accent-color);
+  --content-title-color:var(--accent-color);
 }
 }
+
+.theme-dark 
+  .header__decoration-icon {
+    display: block;
+  }

@@ -16,7 +16,7 @@
 
 .subtitle {
   margin-block-end: 20px;
-  color: var(--accent-color);
+  color: var(--content-title-color);
 }
 
 .title-decor {
@@ -41,9 +41,6 @@
   text-align: start;
 }
 
-.title-font-regular {
-  font-weight: normal;
-}
 
 /*Стили для блока Header*/
 
@@ -105,9 +102,6 @@
   background-color: transparent;
 }
 
-.header__theme-menu-button:disabled {
-  border: 1px solid var(--accent-color);
-}
 
 .header__decoration-icon {
   position: absolute;
@@ -168,13 +162,17 @@
   object-fit: cover;  
 }
 
+.content__card-title {
+  font-weight: normal;
+}
+
 .content__link {
   text-shadow: 2px 2px 0 var(--accent-color);
 }
 
-.heading-margin-block-end {
-    margin-block-end: 20px;
-  }
+.content__subtitle {
+  margin-block-end: 20px;
+}
 
 /*Стили для Footer*/
 
@@ -259,12 +257,8 @@
     left: 20px;
   }
 
-  .heading-margin-block-start {
-    margin-block-start: 10px;
-  }
-
-  .heading-margin-block-end {
-    margin-block-end: 11px;
+  .content__subtitle {
+    margin-block-end: 19px; /*11px*/
   }
 
   .section-grid {
@@ -275,19 +269,16 @@
 
   .content-grid-container {
     margin-block-start: 60px;
+    margin-block-end: 81px;
   }
 
   .content-grid-container
   .content__title {
-    max-width: 200px;
-  }
-
-  .section-grid-margin-start {
-    margin-block-start: 81px;
+    max-width: 236px;
   }
 
   .section-images {
-    margin-block-start: 58px;
+    margin-block-start: 60px;
   }
 
   .content__title-layout {
@@ -388,6 +379,7 @@
     grid-auto-flow: row;
     row-gap: 10px;
     column-gap: 20px;
+    margin-block-end: 50px;
   }
 
   .content-grid-container .content__title {
@@ -399,15 +391,8 @@
     grid-row: 2 / 3;
   }
 
-  .section-grid-margin-start {
-    margin-block-start: 0;
-  }
-  
   .content__title-layout {
-    grid-column: 1;
-    grid-row-start: 1;
-    grid-row-end: 12;
-    max-width: 270px;
+    max-width: 315px;
   }
 
   .content__images {
@@ -436,4 +421,8 @@
 
 .header__theme-menu-button:focus-visible {
   border-block-end: 1px solid var(--underline-color);
+}
+
+.header__theme-menu-button:disabled {
+  outline: 1px solid var(--underline-color);
 }
